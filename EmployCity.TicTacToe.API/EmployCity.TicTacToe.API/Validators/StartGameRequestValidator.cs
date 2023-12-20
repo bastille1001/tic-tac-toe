@@ -1,5 +1,4 @@
-﻿using EmployCity.TicTacToe.API.Extensions;
-using EmployCity.TicTacToe.API.Wrappers;
+﻿using EmployCity.TicTacToe.API.Wrappers;
 using FluentValidation;
 
 namespace EmployCity.TicTacToe.API.Validators
@@ -14,12 +13,10 @@ namespace EmployCity.TicTacToe.API.Validators
                 .WithMessage("Invalid move. It should be 'X', 'x', 'O', or 'o'.");
         }
 
-        private static bool BeValidMove(string? startingPlayer)
+        private static bool BeValidMove(string startingPlayer)
         {
-            return startingPlayer?.ConvertToChar() == 'X' 
-                || startingPlayer?.ConvertToChar() == 'x' 
-                || startingPlayer?.ConvertToChar() == 'O' 
-                || startingPlayer?.ConvertToChar() == 'o';
+            return startingPlayer.Equals("X", StringComparison.InvariantCultureIgnoreCase)
+                || startingPlayer.Equals("O", StringComparison.InvariantCultureIgnoreCase);
         }
     }
 }
