@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  api:
+    build:
+      context: ./EmployCity.TicTacToe.API/EmployCity.TicTacToe.API
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - frontend
+      - mongo
+    networks:
+      - tic_tac_toe_network
+
+  frontend:
+    build:
+      context: ./EmployCity.TicTacToe.Frontend/tic-tac-toe-app
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    networks:
+      - tic_tac_toe_network
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    networks:
+      - tic_tac_toe_network
+    volumes:
+      - mongo_data:/data/db
+
+networks:
+  tic_tac_toe_network:
+
+volumes:
+  mongo_data:
+    driver: local
