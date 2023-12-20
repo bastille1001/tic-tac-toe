@@ -1,5 +1,4 @@
 ﻿using EmployCity.TicTacToe.API.Context;
-using EmployCity.TicTacToe.API.Extensions;
 using EmployCity.TicTacToe.API.Models;
 using EmployCity.TicTacToe.API.Wrappers;
 using FluentValidation;
@@ -37,7 +36,7 @@ namespace EmployCity.TicTacToe.API.Services
             var gameStateResponse = new GameStateResponse
             {
                 Token = gameState.Token,
-                Board = gameState.Board.ConvertToReadableBoard()
+                Board = gameState.Board
             };
 
             return new ServiceResponse<GameStateResponse>(gameStateResponse);
@@ -97,7 +96,7 @@ namespace EmployCity.TicTacToe.API.Services
 
             var gameStateResponse = new GameStateResponse
             {
-                Board = gameState.Board.ConvertToReadableBoard(),
+                Board = gameState.Board,
                 Token = gameToken
             };
 
