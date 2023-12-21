@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployCity.TicTacToe.API", "EmployCity.TicTacToe.API\EmployCity.TicTacToe.API.csproj", "{3E9E3B9B-A0C8-47F8-8A4A-BE0EB6F5EB8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployCity.TicTacToe.API.Tests", "EmployCity.TicTacToe.API.Tests\EmployCity.TicTacToe.API.Tests.csproj", "{5FD36214-99C3-48BE-94C9-442A3DF2EC3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3E9E3B9B-A0C8-47F8-8A4A-BE0EB6F5EB8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E9E3B9B-A0C8-47F8-8A4A-BE0EB6F5EB8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E9E3B9B-A0C8-47F8-8A4A-BE0EB6F5EB8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FD36214-99C3-48BE-94C9-442A3DF2EC3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD36214-99C3-48BE-94C9-442A3DF2EC3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD36214-99C3-48BE-94C9-442A3DF2EC3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD36214-99C3-48BE-94C9-442A3DF2EC3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
